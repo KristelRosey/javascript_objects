@@ -1,0 +1,57 @@
+I.JAVASCRIPT OBJECTS: 
+A.Make an array containing at least 5 JavaScript objects. 
+  const users = [
+      {id: 1, name: "Kreaseu", age: 23},
+      {id: 2, name: "CK", age: 20},
+      {id: 3, name: "Wabbie", age: 23},
+      {id: 4, name: "Kayndie", age: 52},
+      {id: 5, name: "Senju", age: 95}
+  ];
+
+  console.log(users);
+
+B.Use the same array and use the forEach() method to print each object in the array. 
+    users.forEach(user => {
+        console.log(`Player: ${user.id}, Username: ${user.name}, Age: ${user.age}`);
+    });
+
+C.Use the same array and demonstrate a sample code using the push() method on the array. 
+    users.push({id: 6, name: "King", age: 19});
+  console.log(users);
+
+D.Use the same array and demonstrate a sample code using the unshift() method on the array. 
+  users.unshift({id: 0, name: "Sae", age: 23});
+  console.log(users);
+
+E.Use the same array and demonstrate a sample code using the filter() method on the array. 
+  const over30 = users.filter(user => user.age > 30);
+  console.log(over30);
+
+
+F.Use the same array and demonstrate a sample code using the map() method on the array. 
+  const names = users.map(user => user.name);
+  console.log(names);
+
+G.Use the same array and demonstrate a sample code using the reduce() method on the array. 
+  const totalAge = users.reduce((sum, user) => sum + user.age, 0);
+  console.log(totalAge);
+  
+H.Use the same array and demonstrate a sample code using the some() method on the array. 
+  const hasTeen = users.some(user => user.age < 20);
+  console.log('Teens within the players?: ', hasTeen);
+
+
+I.Use the same array and demonstrate a sample code using the every() method on the array.
+NOTE:
+    const users = [
+      {id: 0, name: "Sae", age: 23},
+      {id: 1, name: "Kreaseu", age: 23},
+      {id: 2, name: "CK", age: 20},
+      {id: 3, name: "Wabbie", age: 23},
+      {id: 4, name: "Kayndie", age: 52},
+      {id: 5, name: "Senju", age: 95},
+      {id: 6, name: "King", age: 12} // changed this section for more variety
+  ];
+  
+  const allAdults = users.every(user => user.age >= 18);
+  console.log('old enough players? (no 17 pls): ', allAdults); 
